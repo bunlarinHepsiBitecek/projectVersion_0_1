@@ -32,8 +32,14 @@ class EntranceViewController: UIViewController {
     }
     */
     @IBAction func loginButton(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "gotoLoginPage", sender: self)
+        
     }
     @IBAction func registerButton(_ sender: UIButton) {
+        
+         performSegue(withIdentifier: "gotoRegisterPage", sender: self)
+        
     }
     
 }
