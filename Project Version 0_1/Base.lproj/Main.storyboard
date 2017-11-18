@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="-310" y="118"/>
         </scene>
-        <!--View Controller-->
+        <!--Entrance View Controller-->
         <scene sceneID="cFk-53-nmE">
             <objects>
-                <viewController id="Md6-LC-csS" sceneMemberID="viewController">
+                <viewController id="Md6-LC-csS" customClass="EntranceViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GM1-X0-qQ2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,6 +101,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginButton:" destination="Md6-LC-csS" eventType="touchUpInside" id="egt-J6-brk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjO-B6-2OS">
                                         <rect key="frame" x="46" y="8" width="250" height="42"/>
@@ -113,6 +116,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Register"/>
+                                        <connections>
+                                            <action selector="registerButton:" destination="Md6-LC-csS" eventType="touchUpInside" id="Dl0-5G-swX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.058823529411764705" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

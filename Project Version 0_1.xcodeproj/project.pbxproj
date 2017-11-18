@@ -14,6 +14,7 @@
 		A75F40131FC0B7C600495228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F40111FC0B7C600495228 /* LaunchScreen.storyboard */; };
 		A75F40221FC0D99D00495228 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40211FC0D99D00495228 /* LoginViewController.swift */; };
 		A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40231FC0D9A600495228 /* RegisterViewController.swift */; };
+		A75F40261FC0DBCC00495228 /* EntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40251FC0DBCC00495228 /* EntranceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A75F40141FC0B7C600495228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A75F40211FC0D99D00495228 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A75F40231FC0D9A600495228 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A75F40251FC0DBCC00495228 /* EntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				A75F400A1FC0B7C600495228 /* ViewController.swift */,
 				A75F40211FC0D99D00495228 /* LoginViewController.swift */,
 				A75F40231FC0D9A600495228 /* RegisterViewController.swift */,
+				A75F40251FC0DBCC00495228 /* EntranceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */,
 				A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */,
 				A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */,
+				A75F40261FC0DBCC00495228 /* EntranceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
