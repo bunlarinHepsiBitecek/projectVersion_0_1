@@ -12,6 +12,8 @@
 		A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F400C1FC0B7C600495228 /* Main.storyboard */; };
 		A75F40101FC0B7C600495228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F400F1FC0B7C600495228 /* Assets.xcassets */; };
 		A75F40131FC0B7C600495228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F40111FC0B7C600495228 /* LaunchScreen.storyboard */; };
+		A75F40221FC0D99D00495228 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40211FC0D99D00495228 /* LoginViewController.swift */; };
+		A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40231FC0D9A600495228 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A75F400F1FC0B7C600495228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75F40121FC0B7C600495228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A75F40141FC0B7C600495228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A75F40211FC0D99D00495228 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A75F40231FC0D9A600495228 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,64 @@
 		A75F40071FC0B7C600495228 /* Project Version 0_1 */ = {
 			isa = PBXGroup;
 			children = (
+				A75F40201FC0D60500495228 /* Extensions */,
+				A75F401F1FC0D5FA00495228 /* Services */,
+				A75F401E1FC0D5F300495228 /* Utils */,
+				A75F401D1FC0D5EA00495228 /* Model */,
+				A75F401B1FC0D5B400495228 /* View */,
+				A75F401C1FC0D5DF00495228 /* Controller */,
 				A75F40081FC0B7C600495228 /* AppDelegate.swift */,
-				A75F400A1FC0B7C600495228 /* ViewController.swift */,
 				A75F400C1FC0B7C600495228 /* Main.storyboard */,
 				A75F400F1FC0B7C600495228 /* Assets.xcassets */,
 				A75F40111FC0B7C600495228 /* LaunchScreen.storyboard */,
 				A75F40141FC0B7C600495228 /* Info.plist */,
 			);
 			path = "Project Version 0_1";
+			sourceTree = "<group>";
+		};
+		A75F401B1FC0D5B400495228 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A75F401C1FC0D5DF00495228 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A75F400A1FC0B7C600495228 /* ViewController.swift */,
+				A75F40211FC0D99D00495228 /* LoginViewController.swift */,
+				A75F40231FC0D9A600495228 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A75F401D1FC0D5EA00495228 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A75F401E1FC0D5F300495228 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A75F401F1FC0D5FA00495228 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A75F40201FC0D60500495228 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +190,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75F40221FC0D99D00495228 /* LoginViewController.swift in Sources */,
 				A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */,
 				A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */,
+				A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
