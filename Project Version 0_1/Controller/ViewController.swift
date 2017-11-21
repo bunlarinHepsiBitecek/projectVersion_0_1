@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var second_three : Int = 3
+    var second_three : Int = 2
     var timer = Timer()
     var isTimerRunning : Bool = false
     
