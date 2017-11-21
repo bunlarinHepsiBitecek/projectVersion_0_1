@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+        </array>
         <array key="Noteworthy.ttc">
             <string>Noteworthy-Bold</string>
         </array>
@@ -168,7 +171,7 @@
         <!--Login View Controller-->
         <scene sceneID="xZV-tG-adA">
             <objects>
-                <viewController id="hdv-Wt-XJg" customClass="LoginViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewControllerID" id="hdv-Wt-XJg" customClass="LoginViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eqH-ac-mgl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,6 +212,7 @@
                         <outlet property="Login" destination="9od-WE-u6b" id="v3Z-hz-fBd"/>
                         <outlet property="email" destination="1aI-1q-0Vt" id="3Ab-fh-tWU"/>
                         <outlet property="password" destination="Lmk-cm-Rzt" id="Qvw-sd-IyK"/>
+                        <segue destination="aYB-fJ-mPw" kind="show" identifier="gotoVerificationPanel" id="E9r-0D-eSB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXF-8v-Pec" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,13 +226,104 @@
                     <view key="view" contentMode="scaleToFill" id="m5X-kZ-5jm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylw-kD-wmi">
+                                <rect key="frame" x="164" y="64" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="gotoAddImage:" destination="Xb2-wI-I3F" eventType="touchUpInside" id="ll5-2T-GCz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lxG-zw-8gh"/>
                     </view>
+                    <connections>
+                        <segue destination="fXe-BC-Zlb" kind="show" identifier="gotoAddImageAndVerificationSend" id="lCP-Sb-4US"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xnm-gO-Ta0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="650" y="962"/>
+        </scene>
+        <!--Add Image Verification View Controller-->
+        <scene sceneID="itn-gY-di8">
+            <objects>
+                <viewController id="fXe-BC-Zlb" customClass="AddImageVerificationViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FC6-Fg-5qN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLR-n5-drL">
+                                <rect key="frame" x="164" y="64" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testGotoEmailVerificationPage:" destination="fXe-BC-Zlb" eventType="touchUpInside" id="Zop-Ht-WKk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oUN-b2-wSh"/>
+                    </view>
+                    <connections>
+                        <segue destination="aYB-fJ-mPw" kind="show" identifier="gotoEmailVerificationInfo" id="er1-kD-RCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gry-S9-mjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1585" y="960"/>
+        </scene>
+        <!--Verification View Controller-->
+        <scene sceneID="P2I-ef-th6">
+            <objects>
+                <viewController storyboardIdentifier="VerificationViewControllerID" id="aYB-fJ-mPw" customClass="VerificationViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Ry-bE-cb3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXI-b9-Oz8">
+                                <rect key="frame" x="16" y="187" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpk-n8-SOb">
+                                <rect key="frame" x="16" y="158" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGY-6u-YrQ">
+                                <rect key="frame" x="16" y="323" width="343" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWx-af-NWk">
+                                <rect key="frame" x="87" y="510" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send Verification Email Again"/>
+                                <connections>
+                                    <action selector="buttonSendVerificationEmailAgain:" destination="aYB-fJ-mPw" eventType="touchUpInside" id="PmW-Bc-YFo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8Tq-5P-sGQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailVerificationTextField" destination="PXI-b9-Oz8" id="Dmt-db-uq5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zE6-3V-aMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2616.8000000000002" y="959.37031484257875"/>
         </scene>
         <!--Start Page View Controller-->
         <scene sceneID="O7x-UK-IKP">
@@ -251,4 +346,7 @@
             <point key="canvasLocation" x="-1175" y="118"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="er1-kD-RCM"/>
+    </inferredMetricsTieBreakers>
 </document>

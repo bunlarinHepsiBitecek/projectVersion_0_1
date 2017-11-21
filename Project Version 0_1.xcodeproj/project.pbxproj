@@ -10,6 +10,9 @@
 		0476E4F9FFF99A10D02F1BB7 /* Pods_Project_Version_0_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2EAC58EB2B78FDCBF4F5D0 /* Pods_Project_Version_0_1.framework */; };
 		A73828301FC35DCB003C1827 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738282F1FC35DCB003C1827 /* Validation.swift */; };
 		A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828311FC36379003C1827 /* ConstantCharacters.swift */; };
+		A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73828371FC3E196003C1827 /* VerificationViewController.swift */; };
+		A7407F011FC4A83800DAAF44 /* AddImageVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7407F001FC4A83800DAAF44 /* AddImageVerificationViewController.swift */; };
+		A7407F041FC4B7C600DAAF44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7407F031FC4B7C600DAAF44 /* GoogleService-Info.plist */; };
 		A75F40091FC0B7C600495228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40081FC0B7C600495228 /* AppDelegate.swift */; };
 		A75F400B1FC0B7C600495228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F400A1FC0B7C600495228 /* ViewController.swift */; };
 		A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F400C1FC0B7C600495228 /* Main.storyboard */; };
@@ -19,7 +22,6 @@
 		A75F40241FC0D9A600495228 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40231FC0D9A600495228 /* RegisterViewController.swift */; };
 		A75F40261FC0DBCC00495228 /* EntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40251FC0DBCC00495228 /* EntranceViewController.swift */; };
 		A75F402A1FC0E67400495228 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40291FC0E67400495228 /* ViewExtension.swift */; };
-		A75F402C1FC1BEFD00495228 /* takasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F402B1FC1BEFD00495228 /* takasiViewController.swift */; };
 		A75F402F1FC1D3E300495228 /* UIViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F402E1FC1D3E300495228 /* UIViewDesign.swift */; };
 		A75F40351FC238B600495228 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F40341FC238B600495228 /* StartPageViewController.swift */; };
 		A7AFE0371FC3376500656A02 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFE0361FC3376500656A02 /* File.swift */; };
@@ -30,6 +32,10 @@
 		A148C3682F780F8F696B8FB2 /* Pods-Project Version 0_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Version 0_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Version 0_1/Pods-Project Version 0_1.debug.xcconfig"; sourceTree = "<group>"; };
 		A738282F1FC35DCB003C1827 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A73828311FC36379003C1827 /* ConstantCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantCharacters.swift; sourceTree = "<group>"; };
+		A73828371FC3E196003C1827 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		A7407F001FC4A83800DAAF44 /* AddImageVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageVerificationViewController.swift; sourceTree = "<group>"; };
+		A7407F031FC4B7C600DAAF44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A7407F051FC4B8D100DAAF44 /* Project Version 0_1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Project Version 0_1.entitlements"; sourceTree = "<group>"; };
 		A75F40051FC0B7C600495228 /* Project Version 0_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Version 0_1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F40081FC0B7C600495228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F400A1FC0B7C600495228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +47,6 @@
 		A75F40231FC0D9A600495228 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A75F40251FC0DBCC00495228 /* EntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceViewController.swift; sourceTree = "<group>"; };
 		A75F40291FC0E67400495228 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		A75F402B1FC1BEFD00495228 /* takasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = takasiViewController.swift; sourceTree = "<group>"; };
 		A75F402E1FC1D3E300495228 /* UIViewDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewDesign.swift; sourceTree = "<group>"; };
 		A75F40341FC238B600495228 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
 		A7AFE0361FC3376500656A02 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
@@ -76,6 +81,48 @@
 			path = Validations;
 			sourceTree = "<group>";
 		};
+		A73828351FC3BE86003C1827 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				A7407F031FC4B7C600DAAF44 /* GoogleService-Info.plist */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		A73828361FC3E121003C1827 /* RegistrationViews */ = {
+			isa = PBXGroup;
+			children = (
+				A75F40231FC0D9A600495228 /* RegisterViewController.swift */,
+				A73828371FC3E196003C1827 /* VerificationViewController.swift */,
+				A7407F001FC4A83800DAAF44 /* AddImageVerificationViewController.swift */,
+			);
+			path = RegistrationViews;
+			sourceTree = "<group>";
+		};
+		A7407EFD1FC3EC4B00DAAF44 /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				A75F400A1FC0B7C600495228 /* ViewController.swift */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		A7407EFE1FC3EC7F00DAAF44 /* EntrencaView */ = {
+			isa = PBXGroup;
+			children = (
+				A75F40251FC0DBCC00495228 /* EntranceViewController.swift */,
+			);
+			path = EntrencaView;
+			sourceTree = "<group>";
+		};
+		A7407EFF1FC3ECB400DAAF44 /* NavigationControllerView */ = {
+			isa = PBXGroup;
+			children = (
+				A75F40341FC238B600495228 /* StartPageViewController.swift */,
+			);
+			path = NavigationControllerView;
+			sourceTree = "<group>";
+		};
 		A75F3FFC1FC0B7C600495228 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +144,8 @@
 		A75F40071FC0B7C600495228 /* Project Version 0_1 */ = {
 			isa = PBXGroup;
 			children = (
+				A7407F051FC4B8D100DAAF44 /* Project Version 0_1.entitlements */,
+				A73828351FC3BE86003C1827 /* Firebase */,
 				A738282E1FC35DBB003C1827 /* Validations */,
 				A75F402D1FC1D3A000495228 /* DesignServices */,
 				A75F40201FC0D60500495228 /* Extensions */,
@@ -125,12 +174,11 @@
 		A75F401C1FC0D5DF00495228 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A7407EFF1FC3ECB400DAAF44 /* NavigationControllerView */,
+				A7407EFE1FC3EC7F00DAAF44 /* EntrencaView */,
+				A7407EFD1FC3EC4B00DAAF44 /* WelcomeView */,
+				A73828361FC3E121003C1827 /* RegistrationViews */,
 				A738282D1FC352F3003C1827 /* LoginView */,
-				A75F400A1FC0B7C600495228 /* ViewController.swift */,
-				A75F40231FC0D9A600495228 /* RegisterViewController.swift */,
-				A75F40251FC0DBCC00495228 /* EntranceViewController.swift */,
-				A75F402B1FC1BEFD00495228 /* takasiViewController.swift */,
-				A75F40341FC238B600495228 /* StartPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -226,6 +274,11 @@
 					A75F40041FC0B7C600495228 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -254,6 +307,7 @@
 			files = (
 				A75F40131FC0B7C600495228 /* LaunchScreen.storyboard in Resources */,
 				A75F40101FC0B7C600495228 /* Assets.xcassets in Resources */,
+				A7407F041FC4B7C600DAAF44 /* GoogleService-Info.plist in Resources */,
 				A75F400E1FC0B7C600495228 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,10 +379,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73828381FC3E196003C1827 /* VerificationViewController.swift in Sources */,
 				A75F402F1FC1D3E300495228 /* UIViewDesign.swift in Sources */,
 				A73828321FC36379003C1827 /* ConstantCharacters.swift in Sources */,
-				A75F402C1FC1BEFD00495228 /* takasiViewController.swift in Sources */,
 				A75F402A1FC0E67400495228 /* ViewExtension.swift in Sources */,
+				A7407F011FC4A83800DAAF44 /* AddImageVerificationViewController.swift in Sources */,
 				A75F40221FC0D99D00495228 /* LoginViewController.swift in Sources */,
 				A75F40351FC238B600495228 /* StartPageViewController.swift in Sources */,
 				A7AFE0371FC3376500656A02 /* File.swift in Sources */,
@@ -474,6 +529,8 @@
 			baseConfigurationReference = A148C3682F780F8F696B8FB2 /* Pods-Project Version 0_1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Project Version 0_1/Project Version 0_1.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVL2SV8VV7;
 				INFOPLIST_FILE = "Project Version 0_1/Info.plist";
@@ -481,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.erkutbas.Project-Version-0-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -491,6 +549,8 @@
 			baseConfigurationReference = 757CC8AC01F59DF3A869DAD9 /* Pods-Project Version 0_1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Project Version 0_1/Project Version 0_1.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVL2SV8VV7;
 				INFOPLIST_FILE = "Project Version 0_1/Info.plist";
@@ -498,6 +558,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.erkutbas.Project-Version-0-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
