@@ -9,15 +9,19 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import SwiftKeychainWrapper
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var Login: UIButton!
+    @IBOutlet var forgotPasswordButton: UIButton!
     
     var emailFieldValidated : Bool = false
     var passwordFieldValidated : Bool = false
+    var emailStringValue : String = SPACE_CHARACTER
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         disableLoginButton()
         
         //testTogoVerificationPanel()
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        print("TouchesBegan is activated")
+        
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("textFieldShouldReturn is activated")
+        
+        textField.resignFirstResponder()
+        
+        return true
         
     }
     
@@ -155,9 +175,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             } else {
                 
                 print("createUserWithCredentials : User successfully created in firebase")
+                // ... save userID to keyChainWrapper
+                
+                if let userObject = user {
+                    
+                    if let userID = userObject.uid as String? {
+                        print("createUserWithCredentials : userID : \(userID)")
+                        self.registerCurrentUserToKeyChain(inputUserID: userID, inputUserIDKey: USER_ID)
+                    }
+                    
+                }
+                
+                print("createUserWithCredentials : keyChainData : \(KeychainWrapper.standard.data(forKey: USER_ID))")
+                print("createUserWithCredentials : keyChainData : \(KeychainWrapper.standard.string(forKey: USER_ID))")
                 
             }
         }
+    }
+    
+    /**
+        if the user forgets his/her password, we make him/her a chance to reset it
+     */
+    @IBAction func forgotPasswordButtonClicked(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "gotoForgotPasswordView", sender: self)
+        
     }
     
     /**
@@ -205,6 +247,40 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         }
     }
+    
+    
+    /*
+        SwiftKeyChainWrapper functions
+     */
+    
+    private func registerCurrentUserToKeyChain(inputUserID : String, inputUserIDKey : String) {
         
+        let _ : Bool = KeychainWrapper.standard.set(inputUserID, forKey: inputUserIDKey)
+        
+    }
         
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

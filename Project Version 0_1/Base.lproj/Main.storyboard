@@ -12,6 +12,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
             <string>Avenir-Heavy</string>
         </array>
         <array key="Noteworthy.ttc">
@@ -99,15 +100,6 @@
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFH-kp-pU6">
-                                        <rect key="frame" x="46" y="175" width="250" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Login"/>
-                                        <connections>
-                                            <action selector="loginButton:" destination="Md6-LC-csS" eventType="touchUpInside" id="egt-J6-brk"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjO-B6-2OS">
                                         <rect key="frame" x="46" y="8" width="250" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -121,6 +113,15 @@
                                         <state key="normal" title="Register"/>
                                         <connections>
                                             <action selector="registerButton:" destination="Md6-LC-csS" eventType="touchUpInside" id="Dl0-5G-swX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFH-kp-pU6">
+                                        <rect key="frame" x="46" y="108" width="250" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginButton:" destination="Md6-LC-csS" eventType="touchUpInside" id="egt-J6-brk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -171,7 +172,7 @@
         <!--Login View Controller-->
         <scene sceneID="xZV-tG-adA">
             <objects>
-                <viewController storyboardIdentifier="LoginViewControllerID" id="hdv-Wt-XJg" customClass="LoginViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController_storyBoardID" id="hdv-Wt-XJg" customClass="LoginViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eqH-ac-mgl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,9 +200,28 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9od-WE-u6b">
                                 <rect key="frame" x="121" y="318" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonClick:" destination="hdv-Wt-XJg" eventType="touchUpInside" id="Uen-J3-PGN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GkR-T1-rPO">
+                                <rect key="frame" x="124" y="356" width="127" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Forgot Password ?">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="Avenir-Book"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPasswordButtonClicked:" destination="hdv-Wt-XJg" eventType="touchUpInside" id="eh2-vu-P5T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -211,13 +231,56 @@
                     <connections>
                         <outlet property="Login" destination="9od-WE-u6b" id="v3Z-hz-fBd"/>
                         <outlet property="email" destination="1aI-1q-0Vt" id="3Ab-fh-tWU"/>
+                        <outlet property="forgotPasswordButton" destination="GkR-T1-rPO" id="77g-u2-cXr"/>
                         <outlet property="password" destination="Lmk-cm-Rzt" id="Qvw-sd-IyK"/>
                         <segue destination="aYB-fJ-mPw" kind="show" identifier="gotoVerificationPanel" id="E9r-0D-eSB"/>
+                        <segue destination="XGP-QF-yMG" kind="show" identifier="gotoForgotPasswordView" id="iNt-GO-Qcb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXF-8v-Pec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1584.8" y="116.49175412293854"/>
+        </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="8qe-Tb-6fa">
+            <objects>
+                <viewController storyboardIdentifier="forgotPasswordVCStoryBoardID" id="XGP-QF-yMG" customClass="ForgotPasswordViewController" customModule="Project_Version_0_1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Drc-UU-0Zp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hOk-Ba-hIK">
+                                <rect key="frame" x="16" y="176" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XGP-QF-yMG" id="lp0-4a-SfP"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjV-aI-qb4">
+                                <rect key="frame" x="121" y="315" width="133" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="continueButtonClicked:" destination="XGP-QF-yMG" eventType="touchUpInside" id="3O7-fA-LE4"/>
+                                    <action selector="loginButtonClick:" destination="hdv-Wt-XJg" eventType="touchUpInside" id="F1m-6e-AEl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="f6R-iq-HUg"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="vjV-aI-qb4" id="o7u-PA-cKe"/>
+                        <outlet property="email" destination="hOk-Ba-hIK" id="Z7K-5Z-JHm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPu-r1-LN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2440.8000000000002" y="116.49175412293854"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Y96-1h-ZGj">
@@ -347,6 +410,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="er1-kD-RCM"/>
+        <segue reference="E9r-0D-eSB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,5 +10,7 @@ target 'Project Version 0_1' do
  pod 'Firebase/Core'
  pod 'Firebase/Auth'
  pod 'SwiftKeychainWrapper'
+ pod 'IQKeyboardManagerSwift'
+ pod 'SwiftKeychainWrapper'
 
 end
