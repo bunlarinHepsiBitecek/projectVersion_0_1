@@ -22,6 +22,9 @@ class VerificationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        self.navigationController?.enableNavigationBar()
+        manageForegroundActions()
+        
         print("VerificationViewController starts")
         print("viewDidLoad : callerViewControllerID : \(callerViewControllerID)")
         
@@ -66,6 +69,54 @@ class VerificationViewController: UIViewController {
                 
             }
         })
+        
+    }
+    
+    private func manageForegroundActions() {
+        
+        let action = #selector(checkUserEmailIsVerifiedAndDirectToMainPage)
+        
+        NotificationCenter.default.addObserver(self, selector: action, name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        
+    }
+    
+    @objc private func checkUserEmailIsVerifiedAndDirectToMainPage() {
+        
+        Auth.auth().currentUser?.reload(completion: { (error) in
+            
+            if error != nil {
+                
+                if let errorMessage = error as NSError? {
+                    
+                    print("errorMessage : \(errorMessage)")
+                    print("errorMessage : \(errorMessage.userInfo)")
+                    print("errorMessage : \(errorMessage.localizedDescription)")
+                    
+                }
+                
+            } else {
+                
+                if let userObject = Auth.auth().currentUser {
+                    
+                    if userObject.isEmailVerified {
+                        
+                        self.directCurrentPageToMainPage()
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        })
+        
+    }
+    
+    private func directCurrentPageToMainPage() {
+        
+        let mainPageViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "mainPageVC_storyBoardID") as! MainPageViewController
+        
+        navigationController?.pushViewController(mainPageViewControllerObject, animated: true)
         
     }
     

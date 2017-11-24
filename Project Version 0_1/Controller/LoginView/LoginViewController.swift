@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import SwiftKeychainWrapper
+import TextFieldEffects
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -26,6 +27,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.enableNavigationBar()
+        
         email.text = "erkutbas007@gmail.com"
         password.text = "123456"
         
@@ -87,14 +90,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
              */
             if error != nil {
                 
-                /*
                 if let errorMessage = error as NSError? {
                     
                     print("LoginButtonClick : \(errorMessage)")
                     print("LoginButtonClick : \(errorMessage.userInfo)")
                     print("LoginButtonClick : \(errorMessage.localizedDescription)")
                     
-                }*/
+                }
                 
                 Firebase.AuthErrorCode(rawValue: (error?._code)!)
                 
@@ -125,14 +127,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         
                         self.gotoVerificationPanel()
                         
+                    } else {
+                        
+                        self.directCurrentPageToMainPage()
+                        
                     }
-                    
                 }
-                
             }
-            
-            
         }
+    }
+    
+    /*
+        direct to main page
+     */
+    private func directCurrentPageToMainPage() {
+        
+        let mainPageViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "mainPageVC_storyBoardID") as! MainPageViewController
+        
+        navigationController?.pushViewController(mainPageViewControllerObject, animated: true)
+        
     }
     
     /*

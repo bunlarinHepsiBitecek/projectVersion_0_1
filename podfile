@@ -12,5 +12,6 @@ target 'Project Version 0_1' do
  pod 'SwiftKeychainWrapper'
  pod 'IQKeyboardManagerSwift'
  pod 'SwiftKeychainWrapper'
+ pod 'TextFieldEffects'
 
 end

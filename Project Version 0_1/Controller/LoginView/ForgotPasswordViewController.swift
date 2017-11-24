@@ -23,6 +23,8 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         
+        self.navigationController?.enableNavigationBar()
+        
         email.text = "erkutbas007@gmail.com"
         
         continueButton.disableButton()

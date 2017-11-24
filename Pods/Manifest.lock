@@ -36,12 +36,14 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - SwiftKeychainWrapper (3.0.1)
+  - TextFieldEffects (1.4.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - IQKeyboardManagerSwift
   - SwiftKeychainWrapper
+  - TextFieldEffects
 
 SPEC CHECKSUMS:
   Firebase: d83d287bdb6b1c78320561482706d1fcfc8ddfc1
@@ -54,7 +56,8 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
+  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
 
-PODFILE CHECKSUM: e4c6fa0f5b06484bd63b3544080e6137ea27142e
+PODFILE CHECKSUM: 0c043718c929d2d731baaeb84042f4a069670ef1
 
 COCOAPODS: 1.3.1

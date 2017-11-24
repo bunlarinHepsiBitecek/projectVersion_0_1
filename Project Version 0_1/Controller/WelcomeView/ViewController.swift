@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import SwiftKeychainWrapper
 
 class ViewController: UIViewController {
 
@@ -17,6 +19,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.navigationController?.disableNavigationBar()
         
         runTimer()
         
@@ -41,9 +45,54 @@ class ViewController: UIViewController {
         
         if second_three == 0 {
             
+            //performSegue(withIdentifier: "gotoEntrancePage", sender: self)
+            decideWhichPageWouldLoad()
+            
+        }
+    }
+    
+    private func decideWhichPageWouldLoad() {
+        
+        print("decideWhichPageWouldLoad starts")
+        
+        if let loggedInUser = Auth.auth().currentUser {
+            
+            print("isEmailVerified : \(loggedInUser.isEmailVerified)")
+            
+            if loggedInUser.isEmailVerified {
+                
+                if let resultKeyChainWrapper = KeychainWrapper.standard.string(forKey: USER_ID) {
+                    
+                    if loggedInUser.uid == resultKeyChainWrapper {
+                        
+                        print("currentUser is active")
+                        
+                        directCurrentPageToMainPage()
+                    }
+                    
+                }
+                
+            } else {
+                
+                print("current user's email is not verified")
+                performSegue(withIdentifier: "gotoEntrancePage", sender: self)
+                
+            }
+            
+        } else {
+            
+            print("user is signed out")
             performSegue(withIdentifier: "gotoEntrancePage", sender: self)
             
         }
+    }
+    
+    private func directCurrentPageToMainPage() {
+        
+        let mainPageViewControllerObject = storyboard?.instantiateViewController(withIdentifier: "mainPageVC_storyBoardID") as! MainPageViewController
+        
+        navigationController?.pushViewController(mainPageViewControllerObject, animated: true)
+        
     }
 
 }
