@@ -59,24 +59,29 @@ class ViewController: UIViewController {
             
             print("isEmailVerified : \(loggedInUser.isEmailVerified)")
             
-            if loggedInUser.isEmailVerified {
+            if let resultKeyChainWrapper = KeychainWrapper.standard.string(forKey: USER_ID) {
                 
-                if let resultKeyChainWrapper = KeychainWrapper.standard.string(forKey: USER_ID) {
+                if loggedInUser.uid == resultKeyChainWrapper {
                     
-                    if loggedInUser.uid == resultKeyChainWrapper {
+                    if loggedInUser.isEmailVerified {
                         
                         print("currentUser is active")
                         
                         directCurrentPageToMainPage()
+                        
+                    } else {
+                        
+                        print("current user's email is not verified")
+                        performSegue(withIdentifier: "gotoEntrancePage", sender: self)
+                        
                     }
                     
+                } else {
+                    
+                    print("current user's keychain is not registerd")
+                    performSegue(withIdentifier: "gotoEntrancePage", sender: self)
+                    
                 }
-                
-            } else {
-                
-                print("current user's email is not verified")
-                performSegue(withIdentifier: "gotoEntrancePage", sender: self)
-                
             }
             
         } else {

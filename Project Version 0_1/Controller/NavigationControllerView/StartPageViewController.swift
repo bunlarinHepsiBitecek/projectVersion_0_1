@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
 
 class StartPageViewController: UINavigationController {
     
@@ -14,6 +15,8 @@ class StartPageViewController: UINavigationController {
         super.viewDidLoad()
 
         print("ilk ekran")
+        print("Entrance view starts")
+        print("KeyChainData : \(KeychainWrapper.standard.string(forKey: USER_ID))")
         
     }
     

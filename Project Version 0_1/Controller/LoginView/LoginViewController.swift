@@ -166,6 +166,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func createUserWithCredentials() {
         
+        let userDatabaseObject = User()
+        
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
             
             if error != nil {
@@ -195,6 +197,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     if let userID = userObject.uid as String? {
                         print("createUserWithCredentials : userID : \(userID)")
                         self.registerCurrentUserToKeyChain(inputUserID: userID, inputUserIDKey: USER_ID)
+                        
+                        userDatabaseObject.setUserID(inputUserID: userID)
+                        userDatabaseObject.setUserName(inputName: "baserkut")
+                        userDatabaseObject.setUserNameSurname(inputNameSurname: "Erkut Bas")
+                        userDatabaseObject.setUserEmail(inputEmail: self.email.text!)
+                        userDatabaseObject.setUserGender(inputUserGender: "erkek")
+                        userDatabaseObject.setUserBirthday(inputUserBirthday: "18.3.1988")
+                        
+                        userDatabaseObject.appendAttributeToDictionary(inputKey: CONSTANT_USERNAME, inputValue: userDatabaseObject.username)
+                    
+                        userDatabaseObject.appendAttributeToDictionary(inputKey: CONSTANT_NAME_SURNAME, inputValue: userDatabaseObject.userNameSurname)
+                        
+                        userDatabaseObject.appendAttributeToDictionary(inputKey: CONSTANT_EMAIL, inputValue: userDatabaseObject.email)
+                        
+                        userDatabaseObject.appendAttributeToDictionary(inputKey: CONSTANT_GENDER, inputValue: userDatabaseObject.gender)
+                        
+                        DatabaseUser.ds.createFirbaseDatabaseUser(userID: userID, userData: userDatabaseObject.userDictionary)
+                        
                     }
                     
                 }

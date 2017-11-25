@@ -49,4 +49,9 @@ class MainPageViewController: UIViewController {
         
     }
     
+    @IBAction func AddImageClicked(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "gotoTemporaryAddImage", sender: self)
+        
+    }
 }
