@@ -9,6 +9,11 @@ target 'Project Version 0_1' do
  
  pod 'Firebase/Core'
  pod 'Firebase/Auth'
+ pod 'Firebase/Database'
+ pod 'Firebase/Storage'
  pod 'SwiftKeychainWrapper'
+ pod 'IQKeyboardManagerSwift'
+ pod 'SwiftKeychainWrapper'
+ pod 'TextFieldEffects'
 
 end
