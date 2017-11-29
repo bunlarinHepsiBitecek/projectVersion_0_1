@@ -246,6 +246,14 @@
                                     <outlet property="delegate" destination="hdv-Wt-XJg" id="r9r-6p-Erf"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCD-he-eZb">
+                                <rect key="frame" x="164" y="416" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="deneme:" destination="hdv-Wt-XJg" eventType="touchUpInside" id="Bqm-VN-H1R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="x3h-ge-vhk"/>
@@ -318,7 +326,7 @@
         <!--Tempoary Add Image View Controller-->
         <scene sceneID="weP-Hv-txf">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="gr8-Ww-qBW" customClass="TempoaryAddImageViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="temporaryID" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="gr8-Ww-qBW" customClass="TempoaryAddImageViewController" customModule="Project_Version_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nws-Rz-NvQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,8 +346,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZA-0V-gpV">
+                                        <rect key="frame" x="245" y="261" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="deneme:" destination="gr8-Ww-qBW" eventType="touchUpInside" id="U28-Ez-lrl"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zhK-d3-7tH">
-                                        <rect key="frame" x="80" y="299" width="182" height="30"/>
+                                        <rect key="frame" x="80" y="305" width="182" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -351,6 +367,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="gotoVerificationPage:" destination="gr8-Ww-qBW" eventType="touchUpInside" id="AMA-F1-QU5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -360,12 +379,13 @@
                         <viewLayoutGuide key="safeArea" id="6hk-he-lPn"/>
                     </view>
                     <connections>
+                        <outlet property="continueVerificationPageButton" destination="zhK-d3-7tH" id="8uK-4Q-SSO"/>
                         <outlet property="imageView" destination="mN0-Cc-nSS" id="tmr-9M-lZq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jet-i1-MFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-311.19999999999999" y="957.57121439280365"/>
+            <point key="canvasLocation" x="-1175" y="1798"/>
         </scene>
         <!--Add Image Verification View Controller-->
         <scene sceneID="itn-gY-di8">
@@ -456,6 +476,7 @@
                     </view>
                     <connections>
                         <outlet property="emailVerificationTextField" destination="DHk-pl-L59" id="o8Y-IX-Qau"/>
+                        <outlet property="verificationInfoLabel" destination="hGY-6u-YrQ" id="V90-gk-TS2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zE6-3V-aMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -663,6 +684,6 @@
         <image name="male_selected.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E9r-0D-eSB"/>
+        <segue reference="er1-kD-RCM"/>
     </inferredMetricsTieBreakers>
 </document>

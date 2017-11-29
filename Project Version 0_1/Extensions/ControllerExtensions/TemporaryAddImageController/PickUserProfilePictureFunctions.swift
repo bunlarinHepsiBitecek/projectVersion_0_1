@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 extension TempoaryAddImageViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
@@ -44,6 +45,9 @@ extension TempoaryAddImageViewController : UIImagePickerControllerDelegate, UINa
             print("check3")
             self.imageView.image = selectedImage
             self.dismiss(animated: true, completion: nil)
+            
+            setSelectedImageToUser()
+            
         }
     }
     
@@ -55,5 +59,58 @@ extension TempoaryAddImageViewController : UIImagePickerControllerDelegate, UINa
         
     }
     
+    //
+    func decideHowProfilePictureLoads() {
+        
+        let profilePictureAlertController = UIAlertController(title: "Choose Profile Picture", message: nil, preferredStyle: .actionSheet)
+        
+        let cameraAlertAction = UIAlertAction(title: "Take a photo", style: .default) { (alertAction) in
+            print(alertAction)
+            // function to take a photo
+        }
+        
+        let photoLibraryAlertAction = UIAlertAction(title: "Choose from library", style: .default) { (alertAction) in
+            print(alertAction)
+            self.getProfilePhoto()
+        }
+        
+        let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { (alertAction) in
+            print(alertAction)
+        }
+        
+        profilePictureAlertController.addAction(cameraAlertAction)
+        profilePictureAlertController.addAction(photoLibraryAlertAction)
+        profilePictureAlertController.addAction(cancelAlertAction)
+        
+        self.present(profilePictureAlertController, animated: true, completion: nil)
+        
+    }
+    
+    func setSelectedImageToUser() {
+        
+        self.userObject.setUserProfilePicture(inputUserProfileImage: self.imageView.image!)
+        
+    }
+    
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

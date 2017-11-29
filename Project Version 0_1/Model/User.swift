@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class User {
     
@@ -16,6 +17,9 @@ class User {
     private var _email : String
     private var _gender : String
     private var _birthday : String
+    private var _userProfilePicture : UIImage
+    private var _userProfilePictureUrl : String
+    private var _userProfilePictureUniqueID : String
     
     private var _userDictionary : Dictionary<String, String> = [:]
     
@@ -27,10 +31,14 @@ class User {
         self._email = SPACE_CHARACTER
         self._gender = SPACE_CHARACTER
         self._birthday = SPACE_CHARACTER
+        self._userProfilePictureUrl = SPACE_CHARACTER
+        self._userProfilePictureUniqueID = SPACE_CHARACTER
+        
+        self._userProfilePicture = UIImage()
         
     }
     
-    init(inputUserID : String, inputUserName : String, inputUserNameSurname : String, inputUserEmail : String, inputUserGender : String, inputUserBirthday : String) {
+    init(inputUserID : String, inputUserName : String, inputUserNameSurname : String, inputUserEmail : String, inputUserGender : String, inputUserBirthday : String, inputUserProfilePicture : UIImage, inputUserProfilePictureUrl : String, inputUserProfilePictureUniqueID : String) {
         
         self._userID = inputUserID
         self._userName = inputUserName
@@ -38,6 +46,9 @@ class User {
         self._email = inputUserEmail
         self._gender = inputUserGender
         self._birthday = inputUserBirthday
+        self._userProfilePicture = inputUserProfilePicture
+        self._userProfilePictureUrl = inputUserProfilePictureUrl
+        self._userProfilePictureUniqueID = inputUserProfilePictureUniqueID
         
     }
     
@@ -67,6 +78,18 @@ class User {
     
     var userDictionary : Dictionary<String, String> {
         return _userDictionary
+    }
+    
+    var userProfilePicture : UIImage {
+        return _userProfilePicture
+    }
+    
+    var userProfilePictureUrl : String {
+        return _userProfilePictureUrl
+    }
+    
+    var userProfilePictureUniqueID : String {
+        return _userProfilePictureUniqueID
     }
     
     func setUserID(inputUserID : String) {
@@ -105,12 +128,28 @@ class User {
         
     }
     
+    func setUserProfilePicture(inputUserProfileImage : UIImage) {
+        
+        self._userProfilePicture = inputUserProfileImage
+        
+    }
+    
+    func setUserProfilePictureUrl(inputUrl : String) {
+        
+        self._userProfilePictureUrl = inputUrl
+    }
+    
+    
     func appendAttributeToDictionary(inputKey : String, inputValue : String) {
         
         self._userDictionary[inputKey] = inputValue
         
     }
     
-    
+    func setUserProfilePictureUniqueID(inputUserProfilePictureUniqueID : String) {
+        
+        self._userProfilePictureUniqueID = inputUserProfilePictureUniqueID
+        
+    }
     
 }

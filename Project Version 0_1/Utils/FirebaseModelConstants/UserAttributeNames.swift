@@ -8,10 +8,11 @@
 
 import Foundation
 
-let CONSTANT_KEY_USERID : String = "userid"
-let CONSTANT_USERNAME : String = "username"
-let CONSTANT_NAME_SURNAME : String = "namesurname"
+let CONSTANT_STRING_USERID : String = "userID"
+let CONSTANT_USERNAME : String = "userName"
+let CONSTANT_NAME_SURNAME : String = "nameSurname"
 let CONSTANT_SURNAME : String = "surname"
 let CONSTANT_GENDER : String = "gender"
 let CONSTANT_BIRTHDAY : String = "birthday"
 let CONSTANT_EMAIL : String = "email"
+let CONSTANT_URL : String = "profilePictureUrl"
